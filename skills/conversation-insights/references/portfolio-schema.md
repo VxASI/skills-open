@@ -20,4 +20,4 @@ Link representative entries using relative paths, with a short explanation of wh
 
 ## Required entry relationship
 
-Every concise entry may link to one matching private reference. The reference must include a sensitivity note and should preserve context needed to evaluate the public entry without making the public entry verbose.
+Every saved entry must have one matching private reference. The reference must include a sensitivity note and preserve enough context to evaluate the public entry without making the public entry verbose. Avoid exact quotations unless necessary.

@@ -1,4 +1,4 @@
 interface:
   display_name: "Conversation Insights"
   short_description: "Capture credible wins from conversations"
-  default_prompt: "Use $conversation-insights to capture the strongest insights from this conversation."
+  default_prompt: "Use $conversation-insights to analyze the strongest evidence-based insights from this conversation. Do not save anything unless I ask."

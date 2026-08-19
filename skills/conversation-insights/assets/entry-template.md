@@ -2,6 +2,8 @@
 
 One-sentence evidence-backed summary.
 
+Remove optional sections when they are unsupported or not useful. Do not leave placeholder headings in completed entries.
+
 ## Signals
 
 - **Observed:** …
