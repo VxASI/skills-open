@@ -4,7 +4,7 @@ Use the portfolio as an evidence index and adaptive capability profile, not a pe
 
 ## Main card
 
-Keep approximately 6–8 dimensions relevant to the user's actual work and goals. Each row needs a score only when evidence warrants one.
+Keep up to 6–8 dimensions relevant to the user's actual work and goals. Use fewer until sufficient evidence exists. Each row needs a score only when evidence warrants one.
 
 | Capability | Score | Confidence | Trend | Evidence |
 | --- | ---: | --- | --- | --- |

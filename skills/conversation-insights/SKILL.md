@@ -31,6 +31,8 @@ When saving is requested, resolve the portfolio root in this order:
 
 Keep all user data outside the installed skill folder. Read existing portfolio data only as needed for the request and only when the agent has filesystem access. If access is unavailable, provide the files as Markdown for the user to save.
 
+Treat entry references as private and never share or upload them without explicit permission. They are ordinary Markdown files, not encrypted. Before saving them in a shared or cloud-synced location, warn the user.
+
 Create this layout:
 
 ```text
