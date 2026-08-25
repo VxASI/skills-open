@@ -1,6 +1,6 @@
 ---
 name: public-profile-intelligence
-description: Research a person, founder, creator, company, or the user's own public profile using publicly available professional information. Build a concise, evidence-backed picture of identity, work, projects, claims, credibility, discoverability, and relevant overlap. Use when the user asks to research someone, check who a person is, verify a professional claim, understand a new connection, evaluate a public profile, or audit their own public footprint.
+description: Research a person, founder, creator, company, or the user's own public profile using public professional information. Build a concise, evidence-backed picture of identity, work, projects, claims, credibility, discoverability, relevant overlap, and agentic search readiness. Use when the user asks to research someone, verify a professional claim, understand a new connection, evaluate a public profile, audit their own public footprint, or test how well an AI agent could discover and understand them from the public web.
 ---
 
 # Public Profile Intelligence
@@ -10,6 +10,10 @@ Turn scattered public information into a concise, evidence-backed profile.
 The goal is not to collect everything about someone. Answer:
 
 **Who does the public internet think this person is, what can actually be verified, and what matters to the user?**
+
+For self-audits, add one more question:
+
+**If an AI agent were looking for someone with this person's actual capabilities, would it find and correctly understand them?**
 
 ## Principles
 
@@ -21,6 +25,7 @@ The goal is not to collect everything about someone. Answer:
 - Never merge profiles based on name alone.
 - Cite important conclusions and say when something cannot be verified.
 - Optimize for signal, not completeness.
+- For agentic-search audits, optimize for accurate machine discoverability rather than keyword stuffing or generic SEO advice.
 
 ## Inputs
 
@@ -106,7 +111,7 @@ When the target is the user, simulate a stranger discovering them from scratch.
 
 Evaluate:
 
-- **Discoverability** — can they be found by name?
+- **Discoverability** — can they be found by name and by the work they want to be found for?
 - **Identity coherence** — do profiles clearly represent the same person?
 - **Current positioning** — is it obvious what they do now?
 - **Evidence strength** — are important claims backed by visible work?
@@ -116,6 +121,29 @@ Evaluate:
 - **Narrative coherence** — does the footprint tell one understandable story?
 
 Prioritize high-leverage gaps over generic SEO advice.
+
+### 6. Test agentic discoverability
+
+When the user asks about agentic search, AI discoverability, being found by agents, or when a self-audit would benefit from it, simulate several realistic discovery intents instead of searching only the person's name.
+
+Examples:
+
+- "engineer building agentic systems"
+- "open source AI evaluation tooling"
+- "founder working on privacy-first personal finance"
+- "researcher with browser-based document parsing experience"
+
+Choose intents from the person's actual public work and stated goals. Do not invent expertise they have not demonstrated.
+
+For each intent, assess:
+
+- **Retrievability** — is there public content that could surface for this intent?
+- **Attribution** — can that content be confidently connected back to the person?
+- **Evidence quality** — does the result contain proof, or only self-description?
+- **Entity consistency** — are names, aliases, domains, and handles connected clearly enough for an agent to merge them correctly?
+- **Machine-readable signals** — where visible, do metadata, structured data, canonical links, bios, repository ownership, and cross-links reinforce the same identity?
+
+Then identify the smallest changes that would improve accurate discovery. Prefer canonical identity links, explicit authorship, consistent naming, project attribution, descriptive page titles, structured metadata, and evidence-rich project pages over repetitive keywords.
 
 ## Modes
 
@@ -152,6 +180,20 @@ When the target is the user:
 6. Recommend concrete linkage improvements.
 7. Re-run periodically if the user wants to measure improvement.
 
+### Agentic Search Mode
+
+Use when the goal is to improve how AI agents discover or understand the person.
+
+1. Establish the target identity and desired professional positioning.
+2. Generate 3–5 realistic discovery intents from verified work.
+3. Search those intents without depending on the person's name.
+4. Check whether the person, their projects, or their evidence surfaces.
+5. Trace whether an agent could reliably connect surfaced work back to the correct identity.
+6. Separate a **retrieval gap** from an **identity-linkage gap** from an **evidence gap**.
+7. Recommend the smallest high-leverage fixes.
+
+Do not promise that a specific AI product will index or rank a page. Evaluate the public signals that make correct retrieval and attribution more likely.
+
 ## Output
 
 Default to a compact report:
@@ -174,6 +216,9 @@ Include only when meaningful claims need qualification.
 
 ### Relevant Overlap
 Include when researching someone for a conversation, collaboration, hire, investment, partnership, or similar professional relationship.
+
+### Agentic Search Readiness
+Include for agentic-search audits. Summarize retrievability, attribution, evidence strength, and the most important discovery gap.
 
 ### Gaps
 Important missing connections, weak evidence, conflicting information, or discoverability problems.
