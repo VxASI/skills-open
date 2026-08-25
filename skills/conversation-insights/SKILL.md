@@ -21,6 +21,8 @@ Extract credible evidence of how the user thinks and works. Create a concise, sh
 
 Use specific evidence rather than generic praise. Do not infer ability from title, vocabulary, confidence, or self-description. Treat coding, research, communication, leadership, creativity, learning, and everyday judgment as equally valid sources of evidence.
 
+When multiple conversations or entries describe the same event, treat them as repeated references to one piece of evidence rather than independent proof. Merge overlapping signals before scoring so repetition does not inflate confidence or capability ratings.
+
 ## Save only with permission
 
 When saving is requested, resolve the portfolio root in this order:
@@ -46,7 +48,7 @@ Create this layout:
 
 Use the templates in `assets/` for new files. Keep the public entry concise. Every saved entry must have one matching private reference. The reference may be minimal, but it must preserve enough context to audit the entry; avoid exact quotations unless necessary. References are private by default and must not be shared unless the user explicitly approves it.
 
-Before writing, detect a likely duplicate by title, date, and central evidence. Update the existing record or create a new one according to the user's intent. Report exactly which files were created or updated.
+Before writing, detect a likely duplicate by title, date, central evidence, and event identity. Update the existing record or create a new one according to the user's intent. Report exactly which files were created or updated.
 
 ## Maintain the dynamic card
 
