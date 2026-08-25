@@ -1,6 +1,6 @@
 ---
 name: public-profile-intelligence
-description: Research a person, founder, creator, company, or the user's own public profile using public professional information. Build a concise, evidence-backed picture of identity, work, projects, claims, credibility, discoverability, relevant overlap, and agentic search readiness. Use when the user asks to research someone, verify a professional claim, understand a new connection, evaluate a public profile, audit their own public footprint, or test how well an AI agent could discover and understand them from the public web.
+description: Research a person, founder, creator, company, or the user's own public profile using public professional information. Build a concise, evidence-backed picture of identity, work, projects, claims, credibility, discoverability, relevant overlap, agentic search readiness, and optional professional comparison. Use when the user asks to research someone, verify a professional claim, understand a new connection, evaluate a public profile, audit their own public footprint, test how well an AI agent could discover and understand them from the public web, compare two public professional profiles, or create a shareable intelligence report.
 ---
 
 # Public Profile Intelligence
@@ -26,6 +26,7 @@ For self-audits, add one more question:
 - Cite important conclusions and say when something cannot be verified.
 - Optimize for signal, not completeness.
 - For agentic-search audits, optimize for accurate machine discoverability rather than keyword stuffing or generic SEO advice.
+- For scores and comparisons, use explainable public evidence rather than vibes. Missing evidence is `Not rated`, not zero.
 
 ## Inputs
 
@@ -38,6 +39,7 @@ Accept any useful starting point:
 - personal website
 - company
 - project
+- a second person or profile for comparison
 - any combination of the above
 
 If identity is ambiguous, resolve identity before deeper research.
@@ -194,6 +196,49 @@ Use when the goal is to improve how AI agents discover or understand the person.
 
 Do not promise that a specific AI product will index or rank a page. Evaluate the public signals that make correct retrieval and attribution more likely.
 
+### Comparison Mode
+
+Use when the user asks to compare two public professional profiles, asks how similar two people are professionally, wants to understand their overlap, or wants to know whether there is a credible collaboration angle.
+
+Before scoring, research both profiles to a comparable evidence depth and resolve both identities.
+
+Read `references/scoring-and-artifacts.md` before assigning numeric comparison scores.
+
+Distinguish:
+
+- **Professional Overlap** — how much their domains, problems, technologies, projects, ecosystems, audiences, or current interests intersect.
+- **Similarity** — how alike their demonstrated work, public interests, role shape, and direction are. This is not a personality score.
+- **Collaboration Fit** — whether shared interests plus complementary strengths create a credible reason to work or talk together.
+
+Do not assume comparison against the user. If comparison was not requested, the agent may offer it once after the main profile: `Want me to compare this profile against you or someone else?`
+
+### Shareable Artifact Mode
+
+Use when the user asks for a shareable report, scorecard, visual, site, artifact, PDF, PNG, or other rich presentation.
+
+Read `references/scoring-and-artifacts.md` before creating the rich output.
+
+First complete the evidence-backed analysis. Then inspect the capabilities actually available in the current agent environment.
+
+If the user has not already chosen a format, offer only supported choices among:
+
+- **Site**
+- **Artifact**
+- **PDF**
+- **PNG**
+
+Ask the user which available format they want. Never offer or claim a capability that is not actually available. If the user already selected a supported format, create it without asking again. If none of those formats are available, fall back to the canonical report in structured Markdown.
+
+For publishing or native share links, follow the host environment's visibility and approval rules. Never claim a public URL exists unless the native tool actually returned one.
+
+The canonical information structure is:
+
+1. **Scorecard** — overall readiness, dimension scores, primary gap, retrieval tests, strongest signals, and next move.
+2. **Intelligence Brief** — summarized findings, current positioning, projects, identity graph, professional connections, claims vs verification, retrieval behavior, gaps, recommendations, and sources.
+3. **Comparison** — optional, only when Comparison Mode was requested.
+
+For interactive Sites or Artifacts, these may be sections or tabs rather than literal pages.
+
 ## Output
 
 Default to a compact report:
@@ -218,7 +263,10 @@ Include only when meaningful claims need qualification.
 Include when researching someone for a conversation, collaboration, hire, investment, partnership, or similar professional relationship.
 
 ### Agentic Search Readiness
-Include for agentic-search audits. Summarize retrievability, attribution, evidence strength, and the most important discovery gap.
+Include for agentic-search audits. Summarize retrievability, attribution, evidence strength, and the most important discovery gap. Read `references/scoring-and-artifacts.md` before assigning numeric readiness scores.
+
+### Comparison
+Include only when requested. Show Professional Overlap and, when useful or requested, Similarity and Collaboration Fit with confidence and evidence basis.
 
 ### Gaps
 Important missing connections, weak evidence, conflicting information, or discoverability problems.
