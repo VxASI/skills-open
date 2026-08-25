@@ -1,6 +1,6 @@
 # skills-open
 
-Open, agent-portable skills for personal and enterprise projects.
+Open, agent-portable skills from VxASI, created by Chirag Awale, for personal and enterprise projects.
 
 ## Skills
 
@@ -13,6 +13,16 @@ npx skills add VxASI/skills-open --skill conversation-insights
 ```
 
 The portfolio is stored only when the user requests it, at `~/.agent-achievements/` by default. Set `ACHIEVEMENT_HOME` to use an approved alternate location.
+
+### `public-profile-intelligence`
+
+Research a person, founder, creator, company, or your own public profile using public professional information. It resolves identity, maps the strongest public signals, separates verified evidence from self-claims and inference, finds relevant overlap, and can audit gaps between a person and their projects or brands.
+
+```bash
+npx skills add VxASI/skills-open --skill public-profile-intelligence
+```
+
+The skill uses progressive retrieval by default: quick checks stay lightweight, while deeper diligence is reserved for explicit requests or consequential decisions. It avoids private contact data, data brokers, leaked information, and personal surveillance.
 
 ## Versions
 
