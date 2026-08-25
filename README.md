@@ -22,7 +22,11 @@ Research a person, founder, creator, company, or your own public profile using p
 npx skills add VxASI/skills-open --skill public-profile-intelligence
 ```
 
-Use it for quick background checks, founder or hiring research, claim verification, self-audits, or **agentic search readiness**. In Agentic Search Mode it tests realistic discovery intents, then separates retrieval gaps, identity-linkage gaps, and evidence gaps so the recommended fixes stay concrete.
+Use it for quick background checks, founder or hiring research, claim verification, self-audits, **agentic search readiness**, or optional two-profile comparison. Comparison Mode separates **Professional Overlap**, **Similarity**, and **Collaboration Fit** so complementary profiles are not treated as simply more or less alike.
+
+When the user wants a shareable version, the skill checks what the current agent environment can actually create and offers only supported formats among **Site**, **Artifact**, **PDF**, and **PNG**. The canonical rich report uses a scorecard, an evidence-backed intelligence brief with identity/connections, and an optional comparison section.
+
+In Agentic Search Mode it tests realistic discovery intents, then separates retrieval gaps, identity-linkage gaps, and evidence gaps so the recommended fixes stay concrete.
 
 The skill uses progressive retrieval by default: quick checks stay lightweight, while deeper diligence is reserved for explicit requests or consequential decisions. It avoids private contact data, data brokers, leaked information, and personal surveillance.
 
