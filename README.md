@@ -30,6 +30,20 @@ In Agentic Search Mode it tests realistic discovery intents, then separates retr
 
 The skill uses progressive retrieval by default: quick checks stay lightweight, while deeper diligence is reserved for explicit requests or consequential decisions. It avoids private contact data, data brokers, leaked information, and personal surveillance.
 
+#### Use without installing
+
+Installation is optional when an agent can read GitHub or repository files directly.
+
+Give the agent the skill directory and tell it to read `SKILL.md` first:
+
+```text
+https://github.com/VxASI/skills-open/tree/main/skills/public-profile-intelligence
+```
+
+`SKILL.md` is the portable entry point. It tells the agent which files under `references/` to read only when a deeper capability is needed, such as agentic-search testing, scoring, comparison, or artifact generation.
+
+Installing the skill is still useful when the host supports native skill discovery or you want the workflow available repeatedly without supplying the repository link each time.
+
 ## Versions
 
 The default install command follows `main`, so it always installs the newest published repository version.
