@@ -11,9 +11,20 @@ The goal is not to collect everything about someone. Answer:
 
 **Who does the public internet think this person is, what can actually be verified, and what matters to the user?**
 
-For self-audits, add one more question:
+For self-audits, also ask:
 
 **If an AI agent were looking for someone with this person's actual capabilities, would it find and correctly understand them?**
+
+## Progressive loading
+
+Use this file as the core workflow. Read deeper references only when that capability is needed:
+
+- `references/agentic-search.md` — self-audits, intent-based retrieval tests, public-graph gaps, machine-readable identity.
+- `references/scoring.md` — numeric Agentic Search Readiness scoring.
+- `references/comparison.md` — Professional Overlap, Similarity, Collaboration Fit, connection graphs.
+- `references/artifacts.md` — Site / Artifact / PDF / PNG behavior, canonical report structure, research-board visual guidance.
+
+Do not load optional references for a simple quick background check unless they materially help the task.
 
 ## Principles
 
@@ -44,7 +55,7 @@ Accept any useful starting point:
 
 If identity is ambiguous, resolve identity before deeper research.
 
-## Progressive research
+## Core workflow
 
 Stop when additional searching is unlikely to materially change the answer.
 
@@ -107,51 +118,11 @@ When researching another person, identify genuine overlap with the user's stated
 
 Explain why the overlap matters. Do not invent a networking reason merely to fill the section.
 
-### 5. Audit the public graph
-
-When the target is the user, simulate a stranger discovering them from scratch.
-
-Evaluate:
-
-- **Discoverability** — can they be found by name and by the work they want to be found for?
-- **Identity coherence** — do profiles clearly represent the same person?
-- **Current positioning** — is it obvious what they do now?
-- **Evidence strength** — are important claims backed by visible work?
-- **Entity linkage** — are aliases, brands, projects, domains, and profiles connected?
-- **Freshness** — do prominent results represent current work?
-- **Authority** — are there independent references, contributions, citations, or collaborations?
-- **Narrative coherence** — does the footprint tell one understandable story?
-
-Prioritize high-leverage gaps over generic SEO advice.
-
-### 6. Test agentic discoverability
-
-When the user asks about agentic search, AI discoverability, being found by agents, or when a self-audit would benefit from it, simulate several realistic discovery intents instead of searching only the person's name.
-
-Examples:
-
-- "engineer building agentic systems"
-- "open source AI evaluation tooling"
-- "founder working on privacy-first personal finance"
-- "researcher with browser-based document parsing experience"
-
-Choose intents from the person's actual public work and stated goals. Do not invent expertise they have not demonstrated.
-
-For each intent, assess:
-
-- **Retrievability** — is there public content that could surface for this intent?
-- **Attribution** — can that content be confidently connected back to the person?
-- **Evidence quality** — does the result contain proof, or only self-description?
-- **Entity consistency** — are names, aliases, domains, and handles connected clearly enough for an agent to merge them correctly?
-- **Machine-readable signals** — where visible, do metadata, structured data, canonical links, bios, repository ownership, and cross-links reinforce the same identity?
-
-Then identify the smallest changes that would improve accurate discovery. Prefer canonical identity links, explicit authorship, consistent naming, project attribution, descriptive page titles, structured metadata, and evidence-rich project pages over repetitive keywords.
-
 ## Modes
 
 ### Quick Mode
 
-Use when the user asks for a quick check, quick background, or provides only a screenshot.
+Use for a quick check, quick background, or screenshot-led lookup.
 
 1. Resolve identity.
 2. Run a shallow primary-source search.
@@ -170,78 +141,33 @@ Expand into relevant areas such as career timeline, company history, repository 
 
 Explicitly separate confirmed information from unresolved claims.
 
-### Self-Audit Mode
+### Self-Audit / Agentic Search Mode
 
-When the target is the user:
+Read `references/agentic-search.md`.
 
-1. Search the real name without assuming aliases.
-2. Record what appears first.
-3. Search major known aliases or brands separately.
-4. Determine whether public sources connect those identities.
-5. Identify important work that is difficult to attribute to the person.
-6. Recommend concrete linkage improvements.
-7. Re-run periodically if the user wants to measure improvement.
+Use when the target is the user, or when the goal is to test how AI agents discover and understand the person from the public web.
 
-### Agentic Search Mode
-
-Use when the goal is to improve how AI agents discover or understand the person.
-
-1. Establish the target identity and desired professional positioning.
-2. Generate 3–5 realistic discovery intents from verified work.
-3. Search those intents without depending on the person's name.
-4. Check whether the person, their projects, or their evidence surfaces.
-5. Trace whether an agent could reliably connect surfaced work back to the correct identity.
-6. Separate a **retrieval gap** from an **identity-linkage gap** from an **evidence gap**.
-7. Recommend the smallest high-leverage fixes.
-
-Do not promise that a specific AI product will index or rank a page. Evaluate the public signals that make correct retrieval and attribution more likely.
+If numeric readiness scores are requested or useful, also read `references/scoring.md`.
 
 ### Comparison Mode
 
-Use when the user asks to compare two public professional profiles, asks how similar two people are professionally, wants to understand their overlap, or wants to know whether there is a credible collaboration angle.
+Read `references/comparison.md`.
 
-Before scoring, research both profiles to a comparable evidence depth and resolve both identities.
+Use when the user asks to compare two public professional profiles, asks how similar they are professionally, wants to understand overlap, or wants a collaboration-fit view.
 
-Read `references/scoring-and-artifacts.md` before assigning numeric comparison scores.
-
-Distinguish:
-
-- **Professional Overlap** — how much their domains, problems, technologies, projects, ecosystems, audiences, or current interests intersect.
-- **Similarity** — how alike their demonstrated work, public interests, role shape, and direction are. This is not a personality score.
-- **Collaboration Fit** — whether shared interests plus complementary strengths create a credible reason to work or talk together.
-
-Do not assume comparison against the user. If comparison was not requested, the agent may offer it once after the main profile: `Want me to compare this profile against you or someone else?`
+Do not assume comparison against the user unless requested.
 
 ### Shareable Artifact Mode
 
-Use when the user asks for a shareable report, scorecard, visual, site, artifact, PDF, PNG, or other rich presentation.
+Read `references/artifacts.md`.
 
-Read `references/scoring-and-artifacts.md` before creating the rich output.
+Use when the user asks for a shareable report, scorecard, visual, Site, Artifact, PDF, PNG, or another rich presentation.
 
-First complete the evidence-backed analysis. Then inspect the capabilities actually available in the current agent environment.
+Complete the full evidence-backed analysis first. The visual or artifact is a presentation layer, not a replacement for the report.
 
-If the user has not already chosen a format, offer only supported choices among:
+Inspect the current environment and offer only output types it can actually create. Never claim a public URL exists unless the host tool actually returns one.
 
-- **Site**
-- **Artifact**
-- **PDF**
-- **PNG**
-
-Ask the user which available format they want. Never offer or claim a capability that is not actually available. If the user already selected a supported format, create it without asking again. If none of those formats are available, fall back to the canonical report in structured Markdown.
-
-For publishing or native share links, follow the host environment's visibility and approval rules. Never claim a public URL exists unless the native tool actually returned one.
-
-The canonical information structure is:
-
-1. **Scorecard** — overall readiness, dimension scores, primary gap, retrieval tests, strongest signals, and next move.
-2. **Intelligence Brief** — summarized findings, current positioning, projects, identity graph, professional connections, claims vs verification, retrieval behavior, gaps, recommendations, and sources.
-3. **Comparison** — optional, only when Comparison Mode was requested.
-
-For interactive Sites or Artifacts, these may be sections or tabs rather than literal pages.
-
-## Output
-
-Default to a compact report:
+## Default output
 
 ### Public Signal
 One paragraph describing what a stranger would likely conclude.
@@ -263,10 +189,10 @@ Include only when meaningful claims need qualification.
 Include when researching someone for a conversation, collaboration, hire, investment, partnership, or similar professional relationship.
 
 ### Agentic Search Readiness
-Include for agentic-search audits. Summarize retrievability, attribution, evidence strength, and the most important discovery gap. Read `references/scoring-and-artifacts.md` before assigning numeric readiness scores.
+Include for agentic-search audits. Read `references/agentic-search.md`; read `references/scoring.md` before assigning numeric scores.
 
 ### Comparison
-Include only when requested. Show Professional Overlap and, when useful or requested, Similarity and Collaboration Fit with confidence and evidence basis.
+Include only when requested. Read `references/comparison.md`.
 
 ### Gaps
 Important missing connections, weak evidence, conflicting information, or discoverability problems.
