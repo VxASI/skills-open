@@ -1,4 +1,4 @@
 interface:
   display_name: "Public Profile Intelligence"
   short_description: "Audit public signals, compare profiles, and test agentic discoverability"
-  default_prompt: "Use $public-profile-intelligence to build an evidence-backed view of this public profile. If useful, test agentic discoverability, compare it with a second public professional profile, or create a shareable report using only the rich output formats this environment actually supports."
+  default_prompt: "Use $public-profile-intelligence to build an evidence-backed view of this public profile. Test agentic discoverability when relevant, compare profiles when requested, and create a shareable report when requested using only the rich output formats this environment actually supports."
