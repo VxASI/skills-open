@@ -14,6 +14,16 @@ npx skills add VxASI/skills-open --skill conversation-insights
 
 The portfolio is stored only when the user requests it, at `~/.agent-achievements/` by default. Set `ACHIEVEMENT_HOME` to use an approved alternate location.
 
+### `aha-pass`
+
+Revisit a substantive code or configuration change before handoff to find the occasional higher-leverage “aha” that appears after the first implementation. It probes realistic scenarios, simplification opportunities, coupling, and fragile assumptions, then changes course only when the alternative is clearly better and verifiable—not as a refactor reflex.
+
+```bash
+npx skills add VxASI/skills-open --skill aha-pass
+```
+
+Use it when a completed change deserves one deliberate second look for a smaller, safer, clearer, or more powerful design.
+
 ### `public-profile-intelligence`
 
 Research a person, founder, creator, company, or your own public profile using public professional information. It resolves identity, maps the strongest public signals, separates verified evidence from self-claims and inference, and can audit how well an AI agent could discover, attribute, and understand your work from the public web.
